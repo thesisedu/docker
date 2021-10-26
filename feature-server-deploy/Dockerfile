@@ -1,7 +1,7 @@
 FROM circleci/node:12-stretch
 
 WORKDIR /tmp
-RUN curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-latest.zip" -o "awscliv2.zip"; \
+RUN curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; \
   unzip -q -o awscliv2.zip; \
   sudo ./aws/install; \
   rm -rf awscli*
