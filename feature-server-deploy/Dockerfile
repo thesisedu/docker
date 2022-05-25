@@ -1,4 +1,4 @@
-FROM circleci/node:16-stretch
+FROM circleci/node:16-bullseye
 
 WORKDIR /tmp
 RUN curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; \
@@ -23,3 +23,7 @@ RUN wget https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_am
 
 RUN sudo corepack enable
 RUN sudo corepack prepare pnpm@6.32.13 --activate
+
+RUN sudo apt-get update -y
+RUN sudo apt-get install -y python3
+RUN python3 --version
