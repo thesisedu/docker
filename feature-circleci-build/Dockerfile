@@ -1,4 +1,4 @@
-FROM circleci/node:16-bullseye
+FROM cimg/node:18.12
 
 RUN sudo apt-get update -y
 RUN sudo apt-get install -y python3

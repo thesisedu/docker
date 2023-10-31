@@ -25,5 +25,4 @@ RUN sudo corepack enable
 RUN sudo corepack prepare pnpm@6.32.13 --activate
 
 RUN sudo apt-get update -y
-RUN sudo apt-get install -y python3
-RUN python3 --version
+RUN sudo apt-get install -y python3 python
