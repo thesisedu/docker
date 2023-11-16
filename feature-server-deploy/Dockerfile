@@ -25,4 +25,4 @@ RUN wget https://releases.hashicorp.com/terraform/1.0.9/terraform_1.0.9_linux_am
   rm -rf terraform*
 
 RUN sudo corepack enable
-RUN sudo corepack prepare pnpm@8.10.2 --activate
+RUN sudo corepack prepare pnpm@8.10.5 --activate
