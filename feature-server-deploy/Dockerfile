@@ -1,4 +1,4 @@
-FROM cimg/node:18.12
+FROM cimg/node:20.10
 
 RUN sudo apt-get update -y; \
   sudo apt-get install -y python3
