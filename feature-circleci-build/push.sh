@@ -8,6 +8,6 @@ fi
 
 set -e
 
-docker build . -t thesisedu/feature-circleci-build:build
+docker buildx build --platform linux/amd64 . -t thesisedu/feature-circleci-build:build
 docker tag thesisedu/feature-circleci-build:build ghcr.io/thesisedu/docker/feature-circleci-build:$VERSION
 docker push ghcr.io/thesisedu/docker/feature-circleci-build:$VERSION

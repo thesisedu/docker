@@ -8,6 +8,6 @@ fi
 
 set -e
 
-docker build . -t thesisedu/feature-server-deploy:build
+docker buildx build --platform linux/amd64 . -t thesisedu/feature-server-deploy:build
 docker tag thesisedu/feature-server-deploy:build ghcr.io/thesisedu/docker/feature-server-deploy:$VERSION
 docker push ghcr.io/thesisedu/docker/feature-server-deploy:$VERSION
